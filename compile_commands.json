@@ -7,12 +7,12 @@
       "-I/usr/lib/x86_64-linux-gnu/openmpi/include",
       "-I/usr/lib/x86_64-linux-gnu/openmpi/include/openmpi",
       "-o",
-      "saludos.o",
-      "src/saludos.c"
+      "./bin/hola_mundo_avanzado",
+      "src/hola_mundo_avanzado.c"
     ],
     "directory": "/home/ivan/uni/asd/trabajo-asd",
-    "file": "/home/ivan/uni/asd/trabajo-asd/src/saludos.c",
-    "output": "/home/ivan/uni/asd/trabajo-asd/saludos.o"
+    "file": "/home/ivan/uni/asd/trabajo-asd/src/hola_mundo_avanzado.c",
+    "output": "/home/ivan/uni/asd/trabajo-asd/bin/hola_mundo_avanzado"
   },
   {
     "arguments": [
@@ -22,11 +22,41 @@
       "-I/usr/lib/x86_64-linux-gnu/openmpi/include",
       "-I/usr/lib/x86_64-linux-gnu/openmpi/include/openmpi",
       "-o",
-      "hola_mundo_avanzado.o",
-      "src/hola_mundo_avanzado.c"
+      "./bin/mcpiserial",
+      "src/mcpiserial.c"
     ],
     "directory": "/home/ivan/uni/asd/trabajo-asd",
-    "file": "/home/ivan/uni/asd/trabajo-asd/src/hola_mundo_avanzado.c",
-    "output": "/home/ivan/uni/asd/trabajo-asd/hola_mundo_avanzado.o"
+    "file": "/home/ivan/uni/asd/trabajo-asd/src/mcpiserial.c",
+    "output": "/home/ivan/uni/asd/trabajo-asd/bin/mcpiserial"
+  },
+  {
+    "arguments": [
+      "/usr/bin/gcc",
+      "-c",
+      "-g",
+      "-I/usr/lib/x86_64-linux-gnu/openmpi/include",
+      "-I/usr/lib/x86_64-linux-gnu/openmpi/include/openmpi",
+      "-o",
+      "./bin/pi_serie",
+      "src/pi_serie.c"
+    ],
+    "directory": "/home/ivan/uni/asd/trabajo-asd",
+    "file": "/home/ivan/uni/asd/trabajo-asd/src/pi_serie.c",
+    "output": "/home/ivan/uni/asd/trabajo-asd/bin/pi_serie"
+  },
+  {
+    "arguments": [
+      "/usr/bin/gcc",
+      "-c",
+      "-g",
+      "-I/usr/lib/x86_64-linux-gnu/openmpi/include",
+      "-I/usr/lib/x86_64-linux-gnu/openmpi/include/openmpi",
+      "-o",
+      "./bin/saludos",
+      "src/saludos.c"
+    ],
+    "directory": "/home/ivan/uni/asd/trabajo-asd",
+    "file": "/home/ivan/uni/asd/trabajo-asd/src/saludos.c",
+    "output": "/home/ivan/uni/asd/trabajo-asd/bin/saludos"
   }
 ]

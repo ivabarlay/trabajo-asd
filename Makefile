@@ -14,3 +14,5 @@ all: $(BINS)
 
 clean:
 	$(RM) $(BIN)/*
+bear:
+	bear -- make
