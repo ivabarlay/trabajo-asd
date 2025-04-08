@@ -19,4 +19,4 @@ Instalar **mpi**:
 
 Sobre los ejecutables, una vez compilado:
 
-- `mpirun -np <númeroProcesos> <fichero>`
+- `$ mpirun -np <númeroProcesos> <fichero>`
