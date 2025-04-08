@@ -11,3 +11,12 @@ En linux, ejecutar `$ sudo apt install make`.
 - Para borrar los archivos creados: `$ make clean`
 - Para ejecutar bear (opcional), usar: `$ make bear`
 
+## Ejecución
+
+Instalar **mpi**:
+
+- `$ sudo apt install openmpi-bin`
+
+Sobre los ejecutables, una vez compilado:
+
+- mpirun -np <N> <fichero>
