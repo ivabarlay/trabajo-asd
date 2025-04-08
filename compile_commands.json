@@ -1,0 +1,32 @@
+[
+  {
+    "arguments": [
+      "/usr/bin/gcc",
+      "-c",
+      "-g",
+      "-I/usr/lib/x86_64-linux-gnu/openmpi/include",
+      "-I/usr/lib/x86_64-linux-gnu/openmpi/include/openmpi",
+      "-o",
+      "saludos.o",
+      "saludos.c"
+    ],
+    "directory": "/home/ivan/uni/asd/p8",
+    "file": "/home/ivan/uni/asd/p8/saludos.c",
+    "output": "/home/ivan/uni/asd/p8/saludos.o"
+  },
+  {
+    "arguments": [
+      "/usr/bin/gcc",
+      "-c",
+      "-g",
+      "-I/usr/lib/x86_64-linux-gnu/openmpi/include",
+      "-I/usr/lib/x86_64-linux-gnu/openmpi/include/openmpi",
+      "-o",
+      "hola_mundo_avanzado.o",
+      "hola_mundo_avanzado.c"
+    ],
+    "directory": "/home/ivan/uni/asd/p8",
+    "file": "/home/ivan/uni/asd/p8/hola_mundo_avanzado.c",
+    "output": "/home/ivan/uni/asd/p8/hola_mundo_avanzado.o"
+  }
+]
