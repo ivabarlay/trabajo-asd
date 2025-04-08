@@ -8,11 +8,11 @@
       "-I/usr/lib/x86_64-linux-gnu/openmpi/include/openmpi",
       "-o",
       "saludos.o",
-      "saludos.c"
+      "src/saludos.c"
     ],
-    "directory": "/home/ivan/uni/asd/p8",
-    "file": "/home/ivan/uni/asd/p8/saludos.c",
-    "output": "/home/ivan/uni/asd/p8/saludos.o"
+    "directory": "/home/ivan/uni/asd/trabajo-asd",
+    "file": "/home/ivan/uni/asd/trabajo-asd/src/saludos.c",
+    "output": "/home/ivan/uni/asd/trabajo-asd/saludos.o"
   },
   {
     "arguments": [
@@ -23,10 +23,10 @@
       "-I/usr/lib/x86_64-linux-gnu/openmpi/include/openmpi",
       "-o",
       "hola_mundo_avanzado.o",
-      "hola_mundo_avanzado.c"
+      "src/hola_mundo_avanzado.c"
     ],
-    "directory": "/home/ivan/uni/asd/p8",
-    "file": "/home/ivan/uni/asd/p8/hola_mundo_avanzado.c",
-    "output": "/home/ivan/uni/asd/p8/hola_mundo_avanzado.o"
+    "directory": "/home/ivan/uni/asd/trabajo-asd",
+    "file": "/home/ivan/uni/asd/trabajo-asd/src/hola_mundo_avanzado.c",
+    "output": "/home/ivan/uni/asd/trabajo-asd/hola_mundo_avanzado.o"
   }
 ]
