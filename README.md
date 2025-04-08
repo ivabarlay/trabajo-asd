@@ -9,7 +9,7 @@ En linux, ejecutar `$ sudo apt install make`.
 <-Instrucciones para usar el Makefile:
 - Para compilar todo: `$ make`
 - Para borrar los archivos creados: `$ make clean`
-- Para ejecutar bear (opcional), usar: `$ make bear`
+- Para ejecutar bear (opcional) y crear compile_commands.json, usar: `$ make bear`
 
 ## Ejecución
 
