@@ -1,21 +1,16 @@
 CC = mpicc
 CFLAGS = -g
-OBJECTS = saludos.o hola_mundo_avanzado.o
-TARGET = saludos hola_mundo_avanzado
 
-SRC_DIR = ./src
+SRC = ./src
+BIN = ./bin
 
-all: $(TARGET)
+SRCS=$(wildcard $(SRC)/*.c)
+BINS=$(SRCS:$(SRC)/%.c=%)
 
-$(TARGET): % : %.o
+all: $(BINS)
 
-%.o : $(SRC_DIR)/%.c
-		$(CC) -c $(CFLAGS) $(CPPFLAGS) $< -o $@
+%: $(SRC)/%.c
+	$(CC) $(CFLAGS) -o $(BIN)/$@ $<
 
-clean: 
-	rm -f $(OBJECTS) $(TARGET)
-
-bear: clean
-	bear -- make
-
-.PHONY : all clean bear
+clean:
+	$(RM) $(BIN)/*
