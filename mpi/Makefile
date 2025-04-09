@@ -1,8 +1,8 @@
-CC = mpicc
-CFLAGS = -g
+CC := mpicc
+CFLAGS := -g
 
-SRC = ./src
-BIN = ./bin
+SRC := ./src
+BIN := ./bin
 
 SRCS=$(wildcard $(SRC)/*.c)
 BINS=$(SRCS:$(SRC)/%.c=%)
