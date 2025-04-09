@@ -53,3 +53,6 @@ dkms.conf
 
 # clangd files
 compile_commands.json
+
+# bin files
+bin/
