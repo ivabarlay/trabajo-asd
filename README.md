@@ -1,6 +1,11 @@
 # trabajo-asd
 Trabajo de la asignatura ASD
 
+## Partes
+
+Cada parte del trabajo está en su propia carpeta.
+Dentro de éstas están tanto el código como los Makefiles.
+
 ## Makefile
 
 Instalar <em>make<em>.
