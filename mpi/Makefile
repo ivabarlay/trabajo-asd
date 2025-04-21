@@ -1,5 +1,5 @@
 CC := mpicc
-CFLAGS := -g
+CFLAGS := -lm
 
 SRC := ./src
 BIN := ./bin
@@ -10,7 +10,7 @@ BINS=$(SRCS:$(SRC)/%.c=%)
 all: $(BINS)
 
 %: $(SRC)/%.c
-	$(CC) $(CFLAGS) -o $(BIN)/$@ $<
+	$(CC) -o $(BIN)/$@ $< $(CFLAGS)
 
 clean:
 	$(RM) $(BIN)/*
