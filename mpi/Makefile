@@ -9,8 +9,11 @@ BINS=$(SRCS:$(SRC)/%.c=%)
 
 all: $(BINS)
 
-%: $(SRC)/%.c
+%: $(SRC)/%.c $(BIN)
 	$(CC) -o $(BIN)/$@ $< $(CFLAGS)
+
+$(BIN): 
+	mkdir ./bin
 
 clean:
 	$(RM) $(BIN)/*
