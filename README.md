@@ -26,7 +26,8 @@ En linux, ejecutar `$ sudo apt install make`.
 
 Instalar **mpi**:
 
-- `$ sudo apt install openmpi-bin`
+- `$ sudo apt install openmpi-bin libopenmpi-bin`
+
 
 Sobre los ejecutables, una vez compilado:
 

@@ -1,5 +1,5 @@
 CC := mpicc
-CFLAGS := -g
+CFLAGS := -lm
 
 SRC := ./src
 BIN := ./bin
@@ -9,10 +9,13 @@ BINS=$(SRCS:$(SRC)/%.c=%)
 
 all: $(BINS)
 
-%: $(SRC)/%.c
-	$(CC) $(CFLAGS) -o $(BIN)/$@ $<
+%: $(SRC)/%.c $(BIN)
+	$(CC) -o $(BIN)/$@ $< $(CFLAGS)
+
+$(BIN): 
+	mkdir ./bin
 
 clean:
-	$(RM) $(BIN)/*
+	$(RM) -rf $(BIN)
 bear:
 	bear -- make
