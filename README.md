@@ -18,6 +18,12 @@ En linux, ejecutar `$ sudo apt install make`.
 
 ## Ejecución
 
+### OPENMP
+
+- `$ sudo apt install libgomp1`
+
+### MPI
+
 Instalar **mpi**:
 
 - `$ sudo apt install openmpi-bin`
