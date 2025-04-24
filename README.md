@@ -20,7 +20,8 @@ En linux, ejecutar `$ sudo apt install make`.
 
 ### OPENMP
 
-- `$ sudo apt install libgomp1`
+- Instalar libreria de omp para gcc:  `$ sudo apt install libgomp1`
+- Opcionalmente, instalar libomp para clangd:  `$ sudo apt install libomp-dev`
 
 ### MPI
 
