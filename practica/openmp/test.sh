@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/bin/sh
 
 echo "Montecarlo serial: "
 echo "\n///////////////////"
