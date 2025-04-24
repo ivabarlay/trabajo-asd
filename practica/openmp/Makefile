@@ -1,19 +1,24 @@
-# TODO
-# CC := mpicc
-# CFLAGS := -g
+CC := gcc
+CFLAGS := -g
+OPENMP_FLAGS := -o0 -fopenmp
 
 SRC := ./src
 BIN := ./bin
 
-SRCS=$(wildcard $(SRC)/*.c)
-BINS=$(SRCS:$(SRC)/%.c=%)
+SERIAL_SRCS = $(SRC)/pi_serie.c $(SRC)/mcpiserial.c
+SERIAL_BINS = $(SERIAL_SRCS:$(SRC)/%.c=%)
 
-all: $(BINS)
+BINS = $(SERIAL_BINS)
 
-%: $(SRC)/%.c
-	$(CC) $(CFLAGS) -o $(BIN)/$@ $<
+all: $(BIN) $(BINS)
+
+$(SERIAL_BINS):
+	$(CC) $(CFLAGS) -o $(BIN)/$@ $(SRC)/$@.c
+
+$(BIN): 
+	mkdir ./bin
 
 clean:
-	$(RM) $(BIN)/*
+	$(RM) -rf $(BIN)
 bear:
 	bear -- make
