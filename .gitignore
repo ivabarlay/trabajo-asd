@@ -56,3 +56,6 @@ compile_commands.json
 
 # bin files
 bin/
+
+# Cache files
+.cache/
