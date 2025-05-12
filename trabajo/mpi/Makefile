@@ -16,6 +16,6 @@ $(BIN):
 	mkdir ./bin
 
 clean:
-	$(RM) $(BIN)/*
+	$(RM) -rf $(BIN)/*
 bear:
 	bear -- make
