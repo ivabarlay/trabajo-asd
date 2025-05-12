@@ -1,5 +1,6 @@
 #include <stdio.h>
 #include <stdlib.h>
+
 int main(int argc, char *argv[]) {
 	int i;
 	double x, pi, sum = 0.0;
