@@ -1,21 +1,30 @@
 CC := mpicc
-CFLAGS := -lm
+CFLAGS := -g
+MPI_FLAGS := -lm
 
 SRC := ./src
 BIN := ./bin
 
-SRCS=$(wildcard $(SRC)/*.c)
-BINS=$(SRCS:$(SRC)/%.c=%)
+SERIAL_SRCS = $(SRC)/pi_serie.c $(SRC)/mcpi_serial.c
+SERIAL_BINS = $(SERIAL_SRCS:$(SRC)/%.c=%)
 
-all: $(BINS)
+PAR_SRCS = $(SRC)/pi_par.c $(SRC)/mcpi_par.c
+PAR_BINS = $(PAR_SRCS:$(SRC)/%.c=%)
 
-%: $(SRC)/%.c $(BIN)
-	$(CC) -o $(BIN)/$@ $< $(CFLAGS)
+BINS = $(SERIAL_BINS) $(PAR_BINS)
+
+all: $(BIN) $(BINS)
+
+$(SERIAL_BINS):
+	$(CC) $(CFLAGS) -o $(BIN)/$@ $(SRC)/$@.c
+
+$(PAR_BINS):
+	$(CC) $(CFLAGS) $(OPENMP_FLAGS) -o $(BIN)/$@ $(SRC)/$@.c
 
 $(BIN): 
 	mkdir ./bin
 
 clean:
-	$(RM) -rf $(BIN)/*
+	$(RM) -rf $(BIN)
 bear:
 	bear -- make
