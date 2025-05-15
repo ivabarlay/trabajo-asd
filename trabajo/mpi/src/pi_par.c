@@ -16,9 +16,9 @@ int main(int argc, char *argv[]) {
 
   partition = (long) (numSteps / size);
 
-  printf("rank: %d\n", rank);
-  printf("size: %d\n", size);
-  printf("partition: %ld\n", partition);
+  /* printf("rank: %d\n", rank); */
+  /* printf("size: %d\n", size); */
+  /* printf("partition: %ld\n", partition); */
 
   for (i=rank*partition; i<rank*partition + partition; ++i) {
   	x = (i+0.5)*step;
