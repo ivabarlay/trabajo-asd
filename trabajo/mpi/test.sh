@@ -2,7 +2,7 @@
 runner=(mpirun -np 4)
 
 # Crear csv
-echo "method,implementation,threads,time (s),pi_value,error" > mpi_pi.csv
+echo "method,implementation,threads,time (s),pi_value" > mpi_pi.csv
 
 # Compilar todo
 make
