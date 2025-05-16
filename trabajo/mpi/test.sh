@@ -8,7 +8,7 @@ echo "method,implementation,threads,time (s),pi_value" > mpi_pi.csv
 make
 
 # PI MPI
-${runner[@]} ./bin/pi_par 1000 >> mpi_pi.csv
+${runner[@]} ./bin/pi_par >> mpi_pi.csv
 
 
 
