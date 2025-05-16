@@ -19,7 +19,7 @@ En linux, ejecutar `$ sudo apt install make`.
 ## Ejecución
 
 ### General
-- Ejecutar script de test:  `./test.sh`
+- Ejecutar script de test:  `./test.sh`. Se pueden añadir pruebas con diferentes iteraciones introduciendo los números seguidos del comando.
 - Ejecutar script de limpieza: `./clean.sh`
 
 ### OPENMP
