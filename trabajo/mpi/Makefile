@@ -25,6 +25,6 @@ $(BIN):
 	mkdir ./bin
 
 clean:
-	$(RM) -rf $(BIN)
+	$(RM) -rf $(BIN) compile_commands.json
 bear:
 	bear -- make
