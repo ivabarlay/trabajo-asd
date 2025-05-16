@@ -15,9 +15,12 @@ En linux, ejecutar `$ sudo apt install make`.
 - Para compilar todo: `$ make`
 - Para borrar los archivos creados: `$ make clean`
 - Para ejecutar bear (opcional) y crear compile_commands.json, usar: `$ make bear`
-- Ejecutar script de test:  `./test.sh`
 
 ## Ejecución
+
+### General
+- Ejecutar script de test:  `./test.sh`
+- Ejecutar script de limpieza: `./clean.sh`
 
 ### OPENMP
 
