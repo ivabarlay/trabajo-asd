@@ -4,8 +4,7 @@ SRC_FOLDER="./results"
 
 # Check if argument is passed
 
-if [[ -z "$1" ]]
-then
+if [[ -z "$1" ]]; then
     samples=10000000
 else
     samples=$1
