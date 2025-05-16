@@ -2,7 +2,7 @@ import matplotlib.pyplot as plt
 import pandas as pd
 
 # Cargo los datos con panda (ivan no me mates)
-data = pd.read_csv('./data/ejemplo.csv')
+# data = pd.read_csv('./data/ejemplo.csv')
 
 plt.figure(figsize=(10, 6))
 
