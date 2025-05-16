@@ -12,7 +12,7 @@ fi
 
 # Check if results directory exits, then create it if it is not
 
-if [ ! -d "$DIRECTORY" ]; then
+if [ ! -d "$SRC_FOLDER" ]; then
     mkdir ${SRC_FOLDER}
 fi
 
@@ -27,7 +27,7 @@ make bear
 
 for SAMPLE in ${samples}
 do
-    echo "$SAMPLE"
+    echo "Número de iteraciones: " $SAMPLE
     ${RUNNER[@]} ./bin/pi_par $SAMPLE >> ${SRC_FOLDER}/mpi_result.csv
     ${RUNNER[@]} ./bin/mcpi_par $SAMPLE >> ${SRC_FOLDER}/mpi_result.csv
 done
