@@ -1,2 +1,0 @@
-method,implementation,threads,time (s),pi_value
-Integration,MPI,4,0.000663,3.141593

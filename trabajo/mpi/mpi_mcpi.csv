@@ -1,2 +1,0 @@
-method,implementation,threads,time (s),pi_value
-Monte Carlo,MPI,4,0.003317,3.144004
