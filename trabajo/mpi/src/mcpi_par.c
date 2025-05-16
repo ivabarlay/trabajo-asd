@@ -22,9 +22,14 @@ int main(int argc, char *argv[]) {
   if (argc > 1)
     samples = atoll(argv[1]);
 
+  double start, end;
+
   MPI_Init(&argc, &argv);
   MPI_Comm_rank(MPI_COMM_WORLD, &rank);
   MPI_Comm_size(MPI_COMM_WORLD, &size);
+  if (rank == 0) {
+	start = MPI_Wtime();
+  }
 
   partition = (long) (samples / size);
 
@@ -47,8 +52,10 @@ int main(int argc, char *argv[]) {
   MPI_Reduce(&count, &sum_count, 1, MPI_DOUBLE, MPI_SUM, 0, MPI_COMM_WORLD);
 
   if (rank == 0) {
+    end = MPI_Wtime();
     num_final = 4.0 * sum_count / samples;
-    printf("Valor estimado de pi:  %.7f\n", num_final);
+    /* printf("Valor estimado de pi:  %.7f\n", num_final); */
+    printf("Monte Carlo,MPI,%d,%f,%f\n", size, end - start, num_final);
   }
   MPI_Finalize();
   return 0;
