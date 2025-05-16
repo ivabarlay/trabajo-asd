@@ -14,7 +14,7 @@ fi
 # Check if results directory exits, then create it if it is not
 
 if [ ! -d "$DIRECTORY" ]; then
-    mkdir ./results
+    mkdir ${SRC_FOLDER}
 fi
 
 # Create csv
