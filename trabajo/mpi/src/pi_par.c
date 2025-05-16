@@ -7,7 +7,7 @@ int main(int argc, char *argv[]) {
     int i;
     double x, pi, sum = 0.0;
     /* long numSteps = atol(argv[1]); */
-    long numSteps;
+    long long numSteps;
     if (argc > 1)
         numSteps = atoll(argv[1]);
     else {
@@ -41,7 +41,7 @@ int main(int argc, char *argv[]) {
         end = MPI_Wtime();
         pi = pi * step;
         /* printf("Valor de pi: %f\n", pi); */
-        printf("Integration,MPI,%d,%f,%f", size, end - start, pi);
+        printf("Integration,MPI,%d,%f,%f,%lld\n", size, end - start, pi, numSteps);
     }
     MPI_Finalize();
     return 0;
