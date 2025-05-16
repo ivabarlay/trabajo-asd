@@ -55,7 +55,7 @@ int main(int argc, char *argv[]) {
     end = MPI_Wtime();
     num_final = 4.0 * sum_count / samples;
     /* printf("Valor estimado de pi:  %.7f\n", num_final); */
-    printf("Monte Carlo,MPI,%d,%f,%f\n", size, end - start, num_final);
+    printf("Monte Carlo,MPI,%d,%f,%f,%llu\n", size, end - start, num_final, samples);
   }
   MPI_Finalize();
   return 0;
