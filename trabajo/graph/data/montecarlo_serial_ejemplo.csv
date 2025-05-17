@@ -1,0 +1,2 @@
+method,implementation,threads,time (s),pi_value,error,samples
+MonteCarlo,Serial,1,0.9355,3.1422159,0.0006232,4312494
