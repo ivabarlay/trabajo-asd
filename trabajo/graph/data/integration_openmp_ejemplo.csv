@@ -1,0 +1,5 @@
+method,implementation,threads,time (s),pi_value,error,samples
+Integration,OpenMP,1,0.9551,3.1406094,0.0009833,3124378
+Integration,OpenMP,2,0.0964,3.1411984,0.0003943,4212924
+Integration,OpenMP,4,0.1737,3.1410116,0.000581,5589533
+Integration,OpenMP,8,0.0668,3.1415552,3.75e-05,2530343
