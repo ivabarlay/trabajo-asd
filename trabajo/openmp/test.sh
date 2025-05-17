@@ -41,7 +41,7 @@ if [ ! -d "$SRC_FOLDER" ]; then
 fi
 
 # Create csv
-echo "method,implementation,threads,time (s),pi_value,samples" > ${SRC_FOLDER}/mpi_result.csv
+echo "method,implementation,threads,time (s),pi_value,samples" > ${SRC_FOLDER}/omp_result.csv
 # echo "method,implementation,threads,time (s),pi_value" > ${SRC_FOLDER}/mpi_mcpi.csv
 
 # Compile everything
@@ -53,11 +53,10 @@ for SAMPLE in ${samples}
 do
     for THREAD in ${threads}
     do
-        runner=(mpirun -np ${THREAD})
         echo "Número de iteraciones: " ${SAMPLE}
         echo "Número de hilos: " ${THREAD}
-        ${runner[@]} ./bin/pi_par ${SAMPLE} >> ${SRC_FOLDER}/mpi_result.csv
-        ${runner[@]} ./bin/mcpi_par ${SAMPLE} >> ${SRC_FOLDER}/mpi_result.csv
+        ./bin/pi_par ${SAMPLE} ${THREAD} >> ${SRC_FOLDER}/omp_result.csv
+        ./bin/mcpi_par ${SAMPLE} ${THREAD} >> ${SRC_FOLDER}/omp_result.csv
     done
 done
 
