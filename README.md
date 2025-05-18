@@ -21,6 +21,7 @@ En linux, ejecutar `$ sudo apt install make`.
 ### General
 - Ejecutar script de test:  `./test.sh <número de muestras> <número de hlos>`
 - Ejecutar script de limpieza: `./clean.sh`
+- Instalar librerías Pandas para python: `$ sudo apt install python3-pandas`
 
 ### OPENMP
 
@@ -34,6 +35,9 @@ Instalar **mpi**:
 
 - `$ sudo apt install openmpi-bin libopenmpi-bin`
 
+### GRÁFICAS
+
+En la carpeta `graph`, ejecutar `$ python3 graph.py` para mostrar las gráficas sobre los datos en `/data`.
 
 Sobre los ejecutables, una vez compilado:
 
