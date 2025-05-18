@@ -32,7 +32,7 @@ int main(int argc, char *argv[]) {
 
 #pragma omp parallel private(x, i) reduction(+ : sum)
     size = omp_get_num_threads();
-    printf("%d", size);
+    /* printf("%d", size); */
     {
 #pragma omp for
         for (i = 0; i < numSteps; ++i) {
