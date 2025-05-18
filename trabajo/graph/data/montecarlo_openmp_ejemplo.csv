@@ -1,0 +1,5 @@
+method,implementation,threads,time (s),pi_value,error,samples
+MonteCarlo,OpenMP,1,0.427,3.1416166,2.4e-05,8135533
+MonteCarlo,OpenMP,2,0.1122,3.1425295,0.0009369,1616989
+MonteCarlo,OpenMP,4,0.0425,3.1423266,0.000734,9197142
+MonteCarlo,OpenMP,8,0.0862,3.1412853,0.0003073,8942223
