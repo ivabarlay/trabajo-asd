@@ -45,7 +45,7 @@ echo "method,implementation,threads,time (s),pi_value,samples" > ${SRC_FOLDER}/m
 # echo "method,implementation,threads,time (s),pi_value" > ${SRC_FOLDER}/mpi_mcpi.csv
 
 # Compile everything
-make bear
+make
 
 # PI MPI
 

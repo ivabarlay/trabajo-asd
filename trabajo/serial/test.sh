@@ -29,7 +29,7 @@ fi
 echo "method,implementation,threads,time (s),pi_value,samples" > ${SRC_FOLDER}/serial_result.csv
 
 # Compile everything
-make bear
+make
 
 # PI MPI
 
