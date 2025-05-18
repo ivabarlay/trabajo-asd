@@ -7,16 +7,16 @@ if [[ -z "$1" ]]; then
     samples=10000000
 else
     samples=$1
-    samples_list=()
-    samples_tens=10
-
-    # Generates a list of numbers starting at 10, ending
-    # at the nearest 10th power less than the argument
-    while [[ $samples_tens -le $samples ]]; do
-        samples_list+=("$samples_tens")
-        (( samples_tens= samples_tens * 10 ))
-    done
-    samples=${samples_list[@]}
+    # samples_list=()
+    # samples_tens=10
+    #
+    # # Generates a list of numbers starting at 10, ending
+    # # at the nearest 10th power less than the argument
+    # while [[ $samples_tens -le $samples ]]; do
+    #     samples_list+=("$samples_tens")
+    #     (( samples_tens= samples_tens * 10 ))
+    # done
+    # samples=${samples_list[@]}
 fi
 
 # Check if number of threads is passed
@@ -49,16 +49,11 @@ make
 
 # PI MPI
 
-for SAMPLE in ${samples}
+for THREAD in ${threads}
 do
-    for THREAD in ${threads}
-    do
-        runner=(mpirun -np ${THREAD})
-        echo "Número de iteraciones: " ${SAMPLE}
-        echo "Número de hilos: " ${THREAD}
-        ${runner[@]} ./bin/pi_par ${SAMPLE} >> ${SRC_FOLDER}/mpi_result.csv
-        ${runner[@]} ./bin/mcpi_par ${SAMPLE} >> ${SRC_FOLDER}/mpi_result.csv
-    done
+    runner=(mpirun -np ${THREAD})
+    echo "Número de iteraciones: " ${SAMPLE}
+    echo "Número de hilos: " ${THREAD}
+    ${runner[@]} ./bin/pi_par ${samples} >> ${SRC_FOLDER}/mpi_result.csv
+    ${runner[@]} ./bin/mcpi_par ${samples} >> ${SRC_FOLDER}/mpi_result.csv
 done
-
-

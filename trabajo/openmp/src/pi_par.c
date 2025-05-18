@@ -26,12 +26,12 @@ int main(int argc, char *argv[]) {
 
     step = 1.0 / (double)numSteps;
 
-    omp_set_num_threads(num_threads);
+    /* omp_set_num_threads(num_threads); */
 
     start = omp_get_wtime();
 
 
-#pragma omp parallel private(x, i) reduction(+ : sum)
+#pragma omp parallel num_threads(num_threads) private(x, i) reduction(+ : sum)
     size = omp_get_num_threads();
     /* printf("%d", size); */
     {
