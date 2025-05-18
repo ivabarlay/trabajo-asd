@@ -1,5 +1,0 @@
-method,implementation,threads,time (s),pi_value,error,samples
-Integration,MPI,1,0.6775,3.1407587,0.000834,5584019
-Integration,MPI,2,0.4697,3.1421171,0.0005244,1526876
-Integration,MPI,4,0.1138,3.1420845,0.0004918,9314024
-Integration,MPI,8,0.0208,3.141346,0.0002467,4754841

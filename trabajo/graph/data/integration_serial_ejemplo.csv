@@ -1,2 +1,0 @@
-method,implementation,threads,time (s),pi_value,error,samples
-Integration,Serial,1,0.703,3.1419539,0.0003612,6250387
