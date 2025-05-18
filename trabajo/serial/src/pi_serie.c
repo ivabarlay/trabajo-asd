@@ -1,3 +1,4 @@
+#include <math.h>
 #include <stdio.h>
 #include <stdlib.h>
 #include <time.h>
@@ -25,7 +26,7 @@ int main(int argc, char *argv[]) {
     clock_t end = clock();
     double time_spent = (double)(end - begin) / CLOCKS_PER_SEC;
 
-    printf("Integration,SERIAL,%d,%f,%f,%lld\n", 1, time_spent, pi,
+    printf("Integration,SERIAL,%d,%f,%f,%f,%lld\n", 1, time_spent, pi,fabs(M_PI - pi),
            numSteps);
     return 0;
 }

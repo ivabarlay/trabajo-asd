@@ -41,7 +41,7 @@ if [ ! -d "$SRC_FOLDER" ]; then
 fi
 
 # Create csv
-echo "method,implementation,threads,time (s),pi_value,samples" > ${SRC_FOLDER}/mpi_result.csv
+echo "method,implementation,threads,time (s),pi_value,error,samples" > ${SRC_FOLDER}/mpi_result.csv
 # echo "method,implementation,threads,time (s),pi_value" > ${SRC_FOLDER}/mpi_mcpi.csv
 
 # Compile everything
