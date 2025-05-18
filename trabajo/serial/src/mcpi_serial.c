@@ -2,6 +2,7 @@
  * Algoritmo serie de Monte Carlo para estimar el valor de pi
  */
 
+#include <math.h>
 #include <stdio.h>
 #include <stdlib.h>
 #include <time.h>
@@ -31,7 +32,7 @@ int main(int argc, char *argv[]) {
     double time_spent = (double)(end - begin) / CLOCKS_PER_SEC;
     pi = 4.0 * count / samples;
 
-    printf("Monte Carlo,SERIAL,%d,%f,%f,%lld\n", 1, time_spent, pi,
+    printf("Monte Carlo,SERIAL,%d,%f,%f,%f,%lld\n", 1, time_spent, pi,fabs(M_PI - pi),
            samples);
     return 0;
 }

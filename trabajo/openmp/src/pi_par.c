@@ -1,3 +1,4 @@
+#include <math.h>
 #include <omp.h>
 #include <stdio.h>
 #include <stdlib.h>
@@ -44,6 +45,6 @@ int main(int argc, char *argv[]) {
     pi = step * sum;
 
     end = omp_get_wtime();
-    printf("Integration,OMP,%d,%f,%f,%lld\n", size, end - start, pi, numSteps);
+    printf("Integration,OMP,%d,%f,%f,%f,%lld\n", size, end - start, pi, fabs(M_PI - pi), numSteps);
     return 0;
 }

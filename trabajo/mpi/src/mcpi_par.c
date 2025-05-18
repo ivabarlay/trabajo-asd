@@ -2,6 +2,7 @@
  * Algoritmo serie de Monte Carlo para estimar el valor de pi
  */
 
+#include <math.h>
 #include <mpi.h>
 #include <stdio.h>
 #include <stdlib.h>
@@ -55,7 +56,7 @@ int main(int argc, char *argv[]) {
     end = MPI_Wtime();
     num_final = 4.0 * sum_count / samples;
     /* printf("Valor estimado de pi:  %.7f\n", num_final); */
-    printf("Monte Carlo,MPI,%d,%f,%f,%llu\n", size, end - start, num_final, samples);
+    printf("Monte Carlo,MPI,%d,%f,%f,%f,%llu\n", size, end - start, num_final, fabs(M_PI - num_final) ,samples);
   }
   MPI_Finalize();
   return 0;
