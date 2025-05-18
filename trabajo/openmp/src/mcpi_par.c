@@ -40,7 +40,7 @@ int main(int argc, char *argv[]) {
         size = omp_get_num_threads();
         xi[0] = xi[1] = xi[2] = omp_get_thread_num();
         memset(&buffer, 0, sizeof(buffer));
-#pragma omp parallel for reduction(+ : count)
+#pragma omp for reduction(+ : count)
         for (int i = 0; i < samples; ++i) {
             erand48_r(xi, &buffer, &x);
             erand48_r(xi, &buffer, &y);
