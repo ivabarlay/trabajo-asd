@@ -6,6 +6,12 @@ Trabajo de la asignatura ASD
 Cada parte del trabajo está en su propia carpeta.
 Dentro de éstas están tanto el código como los Makefiles.
 
+El directorio `practicas` almacena boletines de la asignatura que hemos realizado, no son de mayor importancia.
+El código perteneciente a cada método se encuentra en el directorio `trabajo/<método>/`.
+Se organiza el código fuente en `/src`, el código compilado en `/bin` y los resultados del test en `/results`.
+
+El directorio `/graphs` contiene un archivo `graph.py`, que muestra dos gráficas con los resultados guardados en `/data`.
+
 ## Makefile
 
 Instalar <em>make<em>.
