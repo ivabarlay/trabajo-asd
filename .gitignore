@@ -59,6 +59,3 @@ bin/
 
 # Cache files
 *.cache/
-
-# csv result files
-trabajo/**/*.csv
