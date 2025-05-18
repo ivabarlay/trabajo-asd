@@ -31,10 +31,11 @@ int main(int argc, char *argv[]) {
         samples = 1000000;
     }
 
-    omp_set_num_threads(num_threads);
+    /* omp_set_num_threads(num_threads); */
     start = omp_get_wtime();
 
-#pragma omp parallel private(i, xi, buffer)
+
+#pragma omp parallel num_threads(num_threads) private(i, xi, buffer)
     {
         size = omp_get_num_threads();
         xi[0] = xi[1] = xi[2] = omp_get_thread_num();

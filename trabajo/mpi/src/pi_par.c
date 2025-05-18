@@ -43,8 +43,7 @@ int main(int argc, char *argv[]) {
         end = MPI_Wtime();
         pi = pi * step;
         /* printf("Valor de pi: %f\n", pi); */
-        printf("Integration,MPI,%d,%f,%f,%f,%lld\n", size, end - start, pi,
-               fabs(M_PI - pi), numSteps);
+        printf("Integration,MPI,%d,%f,%f,%f,%lld\n", size, end - start, pi, fabs(M_PI - pi), numSteps);
     }
     MPI_Finalize();
     return 0;
